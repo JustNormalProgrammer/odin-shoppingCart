@@ -1,6 +1,52 @@
-nav{
+.nav{
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav ul{
     display: flex;
     align-items: center;
-    gap: 20px;
     justify-content: flex-end;
+    z-index: 1;
+}
+
+.link{
+    height: 60px;
+    width: 100px;
+    position: relative;
+    font-size: 18px;
+    color: #8962f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+.link:after{
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 0%;
+    background-color: #8962f3;
+    bottom: 0;
+    left: 50%;
+    transition: 0.2s ease-out;
+}
+.link:hover:after{
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+:global(a.active):before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #2f293a;
+}
+:global(a.active):after{
+    width: 100%;
+    left: 0;
+    background-color: #a190fa;
 }
