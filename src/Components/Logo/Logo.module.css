@@ -1,3 +1,15 @@
 .logoGroup{
-    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.logo{
+    width: 50px;
+}
+.logoText{
+    font-size: 36px;
+    color: var(--primary-text);
+    font-family: "Bruno Ace", serif;
+    font-weight: 600;
 }

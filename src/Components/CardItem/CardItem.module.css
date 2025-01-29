@@ -1,0 +1,25 @@
+.cardItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-color: var(--main-bg);
+    border-radius: 14px;
+    box-sizing: border-box;
+    padding: 20px 40px;
+    text-align: justify;
+    -webkit-box-shadow: -12px 14px 28px -19px rgba(161, 144, 250, 1);
+    -moz-box-shadow: -12px 14px 28px -19px rgba(161, 144, 250, 1);
+    box-shadow: -12px 14px 28px -19px rgba(161, 144, 250, 1);
+    color: rgb(232, 216, 243);
+}
+h1{
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    width: 200px;
+}
+.textSection{
+    width: 300px
+}

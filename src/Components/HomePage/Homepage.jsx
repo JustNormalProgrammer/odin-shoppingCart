@@ -1,4 +1,10 @@
 import styles from './Homepage.module.css'
+import mainLogo from '../../assets/logo-svgrepo-com.svg'
+import CardItem from '../CardItem/CardItem'
 export default function Homepage(){
-    return <h1 className={styles.red}>Hello Homepage!</h1>
+    return (
+        <main className={styles.container}>
+                
+        </main>
+    )
 }
