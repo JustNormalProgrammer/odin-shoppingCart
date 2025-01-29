@@ -1,0 +1,13 @@
+.cardItem{
+    composes: cardItem from '../CardItem/CardItem.module.css';
+    align-self: flex-end;
+}
+.mainHeader{
+    composes: mainHeader from '../CardItem/CardItem.module.css';
+}
+.logo{
+   composes: logo from '../CardItem/CardItem.module.css';
+}
+.textSection{
+    composes: textSection from '../CardItem/CardItem.module.css';
+}

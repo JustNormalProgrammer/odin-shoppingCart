@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
+    padding: 0 10px;
 }
 .logo{
     width: 50px;
@@ -12,4 +13,9 @@
     color: var(--primary-text);
     font-family: "Bruno Ace", serif;
     font-weight: 600;
+}
+@media(max-width: 500px){
+    .logoText{
+        display: none;
+    }
 }

@@ -1,0 +1,10 @@
+.cardWrapper{
+    width: 60vw;
+    min-width: 300px;
+    max-width: 1000px;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    margin-top: 7vh;
+    margin-bottom: 20px;
+}
