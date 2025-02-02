@@ -1,4 +1,11 @@
 import styles from './Shoppage.module.css'
+import ShopNav from '../ShopNav/ShopNav'
+import ShopItems from '../ShopItems/ShopItems'
 export default function Shoppage(){
-    return <h1>Hello Shoppage!</h1>
+    return (
+        <div className={styles.container}>
+            <ShopNav/>
+            <ShopItems/>
+        </div>
+    )
 }

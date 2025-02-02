@@ -1,0 +1,40 @@
+.navContainer{
+    display: flex;
+    flex-direction: column;
+    min-width: min-content;
+    padding: 20px;
+    flex-grow: 1;
+}
+.navCard{
+    background-color: var(--main-bg);
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+}
+.sectionHeader{
+    font-size: 24px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    font-weight: 600;
+    background-color: var(--selected-bg);
+    color: #8962f3;
+    padding: 15px;
+}
+.cardContent{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 15px;
+}
+.navItem{
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: ease-in 0.1s;
+}
+.navItem.active{
+    color: var(--primary-text);
+}
+.navItem:hover{
+    color: var(--primary-text);
+}
