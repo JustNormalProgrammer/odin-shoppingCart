@@ -1,20 +1,66 @@
 .shopContainer{
     flex-grow: 10;
     min-width: 320px;
+    padding: 20px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .shopItem{
     width: 300px;
-    height: 300px;
+    height: 400px;
     border-radius: 12px;
+    box-sizing: border-box;
     background-color: var(--main-bg);
     display: flex;
+    gap: 10px;
+    padding: 5px 10px 15px;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
 }
 .shopItem img{
-    width: 200px;
+    width: 150px;
     height: auto;
+}
+.itemTitle{
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+}
+.infoGroupWrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.price{
+    font-weight: 600;
+    font-size: 17px;
+    width: 60px;
+    height: min-content;
+}
+.infoGroupWrapper img{
+    width: 60px;
+}
+.infoGroup{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.selectQty{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 10px;
+}
+.selectQty img{
+    width: 30px;
+}
+.selectQty input{
+    font-size: 20px;
+    width: 2ch;
+    height: 30px;
+    text-align: center;
 }

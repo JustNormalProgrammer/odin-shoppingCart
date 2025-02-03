@@ -1,10 +1,24 @@
 import styles from './ShopItems.module.css'
+import CartIcon from '../../assets/cart-plus-svgrepo-com.svg'
+import MinusIcon from '../../assets/minus-svgrepo-com.svg'
+import PlusIcon from '../../assets/plus-large-svgrepo-com.svg'
 import PropTypes from 'prop-types'
 
-function ShopItem({title, price, category, description, image, rating}){
+function ShopItem({title, price, image, rating}){
     return (
         <div className={styles.shopItem}>
             <img src={image} alt={title} />
+            <div className={styles.itemTitle}>{title}</div>
+            <div className={styles.rating}>{rating.rate}</div>
+            <div className={styles.infoGroupWrapper}>
+                    <div className={styles.price}>{price}$</div>
+                    <div className={styles.selectQty}>
+                        <img src={MinusIcon} alt="Delete item"/>
+                        <input type="text" inputMode='numeric' />
+                        <img src={PlusIcon} alt="Add item" />
+                    </div>
+                    <img src={CartIcon} alt="Add to cart"/>
+            </div>
         </div>
     )
 }
@@ -24,7 +38,7 @@ ShopItem.propTypes = {
 export default function ShopItems(){
     return (
         <div className={styles.shopContainer}>
-            <ShopItem title="Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops" price={109.95} description="Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday" category="men's clothing" image="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" rating={{"rate": 3.9, "count": 120}}/>
+            <ShopItem title="Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops" price={109.95} image="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" rating={{"rate": 3.9, "count": 120}}/>
         </div>
     )
 }

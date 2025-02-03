@@ -17,7 +17,7 @@
     border-top-right-radius: 12px;
     font-weight: 600;
     background-color: var(--selected-bg);
-    color: #8962f3;
+    color: var(--primary-text);
     padding: 15px;
 }
 .cardContent{
