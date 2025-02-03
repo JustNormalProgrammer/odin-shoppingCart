@@ -19,14 +19,13 @@ function CategorySection() {
     <div className={styles.navCard}>
       <div className={styles.sectionHeader}>Categories</div>
       <div className={styles.cardContent}>
-          {category.map((value) => {
-            return <NavItem key={value} content={value} />;
-          })}
+        {category.map((value) => {
+          return <NavItem key={value} content={value} />;
+        })}
       </div>
     </div>
   );
 }
-
 
 export default function ShopNav() {
   return (

@@ -19,3 +19,7 @@
         display: none;
     }
 }
+.logoGroup a{
+    display: flex;
+    
+}

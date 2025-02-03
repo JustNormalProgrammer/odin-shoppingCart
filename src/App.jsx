@@ -1,13 +1,16 @@
-import './App.css'
-import { Outlet } from 'react-router'
-import Navbar from './Components/Navbar/Navbar'
+import "./App.css";
+import { Outlet } from "react-router";
+import Navbar from "./Components/Navbar/Navbar";
+import CartContextProvider from "./Contexts/CartContext";
 function App() {
   return (
     <>
-      <Navbar/>
-      <Outlet/>
+      <CartContextProvider>
+        <Navbar />
+        <Outlet />
+      </CartContextProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
