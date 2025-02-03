@@ -34,7 +34,7 @@ function ShopItem({title, price, image, rating}){
             setQty(number);
         }
     }
-    function onAddToCart(e){
+    function onAddToCart(){
         setQty(1);
     }
     return (
@@ -67,10 +67,13 @@ ShopItem.propTypes = {
     })
 }
 
+
+
 export default function ShopItems(){
     return (
         <div className={styles.shopContainer}>
             <ShopItem title="Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops" price={109.95} image="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" rating={{"rate": 3.9, "count": 120}}/>
+            
         </div>
     )
 }

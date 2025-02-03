@@ -50,3 +50,26 @@
     left: 0;
     background-color: var(--selected);
 }
+.cart{
+    width: 35px;
+}
+.cartLink{
+    position: relative;
+}
+.cartQty{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: -22px;
+    bottom: 1px;
+    color: #e8e5eb;
+    background-color: var(--selected-bg);
+    border-radius: 50%;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    min-width: min-content;
+    box-sizing: border-box;
+    border: 1px solid var(--primary-text);
+}

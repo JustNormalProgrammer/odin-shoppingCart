@@ -14,7 +14,7 @@
     font-family: "Bruno Ace", serif;
     font-weight: 600;
 }
-@media(max-width: 500px){
+@media(max-width: 625px){
     .logoText{
         display: none;
     }

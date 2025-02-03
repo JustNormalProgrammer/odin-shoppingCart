@@ -5,6 +5,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-right: 60px;
 }
 .shopItem{
     width: 300px;
@@ -46,7 +47,7 @@
     user-select: none;
 }
 .infoGroupWrapper img:hover{
-    filter: brightness(130%);
+    filter: brightness(140%);
     cursor: pointer;
 }
 .disabled{
