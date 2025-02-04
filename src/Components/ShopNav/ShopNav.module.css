@@ -26,15 +26,15 @@
     gap: 10px;
     padding: 10px 15px;
 }
-.navItem{
+.cardContent div{
     font-size: 20px;
     font-weight: 600;
     cursor: pointer;
     transition: ease-in 0.1s;
 }
-.navItem.active{
-    color: var(--primary-text);
+.cardContent div:hover{
+    color: var(--selected);
 }
-.navItem:hover{
+.cardContent div.active{
     color: var(--primary-text);
 }

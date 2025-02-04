@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import PropTypes from "prop-types";
+
 export const CartContext = createContext(null);
 
 export default function CartContextProvider({ children }) {

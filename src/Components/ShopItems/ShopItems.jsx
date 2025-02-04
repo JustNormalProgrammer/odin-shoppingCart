@@ -6,8 +6,9 @@ import PropTypes from "prop-types";
 import { Rating, ThinStar } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import { useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 
-const myStyles = {
+const ratingStyles = {
   itemShapes: ThinStar,
   activeFillColor: "#8962f3",
   inactiveFillColor: "#2f293a",
@@ -42,7 +43,7 @@ function ShopItem({ title, price, image, rating }) {
       <Rating
         readOnly
         value={rating.rate}
-        itemStyles={myStyles}
+        itemStyles={ratingStyles}
         style={{ maxWidth: 110 }}
       />
       <div className={styles.infoGroupWrapper}>
@@ -81,15 +82,39 @@ ShopItem.propTypes = {
   }),
 };
 
-export default function ShopItems() {
+export default function ShopItems({selectedCategory}) {
+  const { isPending, error, data } = useQuery({
+    queryKey: ["shopItems"],
+    queryFn: () =>
+      fetch("https://fakestoreapi.com/products").then((res) => {
+        if (!res.ok) {
+          throw new Error(`Response status: ${res.status}`);
+        }
+        return res.json();
+      }),
+    staleTime: 1000*60,
+  });
+
+  if (isPending) return "Loading...";
+
+  if (error) return "An error has occurred: " + error.message;
+
   return (
     <div className={styles.shopContainer}>
-      <ShopItem
-        title="Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"
-        price={109.95}
-        image="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-        rating={{ rate: 3.9, count: 120 }}
-      />
+      {data.map((item) => {
+        if(selectedCategory=== 'All' || item.category === selectedCategory){
+          return (
+            <ShopItem
+              key={item.id}
+              title={item.title}
+              price={item.price}
+              image={item.image}
+              rating={item.rating}
+            />
+          );
+        } 
+        return;
+      })}
     </div>
   );
 }
