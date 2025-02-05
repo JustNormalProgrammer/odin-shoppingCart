@@ -1,9 +1,8 @@
 import styles from "./ShopNav.module.css";
 import PropTypes from "prop-types";
 import { useQuery } from "@tanstack/react-query";
-import { useState } from "react";
-
-
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 function NavItem({ content, setSelectedCategory, selectedCategory}) {
   function onSelect(e){
@@ -35,7 +34,7 @@ function CategorySection(props) {
     staleTime: 1000*60,
   });
 
-  if (isPending) return "Loading...";
+
 
   if (error) return "An error has occurred: " + error.message;
 
@@ -43,7 +42,7 @@ function CategorySection(props) {
     <div className={styles.navCard}>
       <div className={styles.sectionHeader}>Categories</div>
       <div className={styles.cardContent}>
-        {data.map((value) => {
+        {isPending ? <Skeleton count={4} baseColor="#2f293a" highlightColor="#a190fa"/> : data.map((value) => {
           return <NavItem key={value} content={value} {...props}/>;
         })}
       </div>

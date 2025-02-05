@@ -1,12 +1,12 @@
 .shopContainer{
-    flex-grow: 10;
     min-width: 320px;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    margin-right: 60px;
+    max-width: 1600px;
+    flex:5;
 }
 .shopItem{
     width: 300px;

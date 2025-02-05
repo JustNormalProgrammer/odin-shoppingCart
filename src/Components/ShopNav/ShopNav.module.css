@@ -1,15 +1,18 @@
 .navContainer{
     display: flex;
     flex-direction: column;
-    min-width: min-content;
+    min-width: 200px;
+    flex:2;
     padding: 20px;
-    flex-grow: 1;
+    max-width: 620px;
 }
 .navCard{
     background-color: var(--main-bg);
     display: flex;
     flex-direction: column;
     border-radius: 12px;
+    position: sticky;
+    top: 80px;
 }
 .sectionHeader{
     font-size: 24px;
