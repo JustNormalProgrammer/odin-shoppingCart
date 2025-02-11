@@ -2,12 +2,21 @@ import { NavLink } from "react-router";
 import Logo from "../Logo/Logo";
 import styles from "./Navbar.module.css";
 import CartIcon from "../../assets/cart-shopping-svgrepo-com.svg";
+import { useContext } from "react";
+import { CartValueContext } from "../../Contexts/CartContext";
 
 function CartLogo() {
+  const cartValue = useContext(CartValueContext);
+  let qty = 0;
+  for(let item of cartValue){
+    if(Number.isInteger(item.qty)){
+      qty += item.qty;
+    }
+  }
   return (
     <div className={styles.cartLink}>
       <img className={styles.cart} src={CartIcon} />{" "}
-      <div className={styles.cartQty}>9</div>
+      <div className={styles.cartQty}>{qty}</div>
     </div>
   );
 }
@@ -15,7 +24,7 @@ function CartLogo() {
 export default function Navbar() {
   return (
     <nav className={styles.nav}>
-      <Logo></Logo>
+      <Logo/>
       <ul>
         <li>
           <NavLink className={styles.link} to={"/"} end>

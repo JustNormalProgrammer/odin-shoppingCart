@@ -42,7 +42,7 @@ function CategorySection(props) {
     <div className={styles.navCard}>
       <div className={styles.sectionHeader}>Categories</div>
       <div className={styles.cardContent}>
-        {isPending ? <Skeleton count={4} baseColor="#2f293a" highlightColor="#a190fa"/> : data.map((value) => {
+        {isPending ? <Skeleton count={4} baseColor="#2f293a" highlightColor="#a190fa" height={25}/> : data.map((value) => {
           return <NavItem key={value} content={value} {...props}/>;
         })}
       </div>

@@ -1,15 +1,18 @@
 import { createContext, useState } from "react";
 import PropTypes from "prop-types";
 
-export const CartContext = createContext(null);
+export const CartValueContext = createContext(null);
+export const CartSetContext = createContext(null);
 
 export default function CartContextProvider({ children }) {
-  const [cart, setCart] = useState(0);
+  const [cart, setCart] = useState([]);
 
   return (
-    <CartContext.Provider value={{ cart, setCart }}>
-      {children}
-    </CartContext.Provider>
+    <CartValueContext.Provider value={cart}>
+      <CartSetContext.Provider value={setCart}>
+        {children}
+      </CartSetContext.Provider>
+    </CartValueContext.Provider>
   );
 }
 

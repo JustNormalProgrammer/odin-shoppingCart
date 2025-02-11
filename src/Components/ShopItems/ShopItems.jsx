@@ -5,8 +5,11 @@ import PlusIcon from "../../assets/plus-large-svgrepo-com.svg";
 import PropTypes from "prop-types";
 import { Rating, ThinStar } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { CartSetContext } from "../../Contexts/CartContext";
 import { useQuery } from "@tanstack/react-query";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 const ratingStyles = {
   itemShapes: ThinStar,
@@ -14,7 +17,8 @@ const ratingStyles = {
   inactiveFillColor: "#2f293a",
 };
 
-function ShopItem({ title, price, image, rating }) {
+function ShopItem({ id, title, price, image, rating }) {
+  const setCart = useContext(CartSetContext);
   const [Qty, setQty] = useState(1);
   function addItem() {
     setQty((e) => e + 1);
@@ -34,6 +38,9 @@ function ShopItem({ title, price, image, rating }) {
     }
   }
   function onAddToCart() {
+    setCart((prev) => {
+      return [...prev, { id: id, qty: Qty }];
+    });
     setQty(1);
   }
   return (
@@ -71,6 +78,7 @@ function ShopItem({ title, price, image, rating }) {
 }
 
 ShopItem.propTypes = {
+  id: PropTypes.number,
   title: PropTypes.string,
   price: PropTypes.number,
   category: PropTypes.string,
@@ -82,7 +90,45 @@ ShopItem.propTypes = {
   }),
 };
 
-export default function ShopItems({selectedCategory}) {
+function SkeletonCard() {
+  return (
+    <div className={styles.shopItem}>
+      <Skeleton
+        height={150}
+        width={220}
+        baseColor="#2f293a"
+        highlightColor="#a190fa"
+      />
+      <Skeleton
+        width={220}
+        height={60}
+        baseColor="#2f293a"
+        highlightColor="#a190fa"
+      />
+      <Skeleton
+        width={220}
+        height={40}
+        baseColor="#2f293a"
+        highlightColor="#a190fa"
+      />
+      <Skeleton
+        width={220}
+        height={60}
+        baseColor="#2f293a"
+        highlightColor="#a190fa"
+      />
+    </div>
+  );
+}
+function SkeletonSection({ count = 10 }) {
+  const skeletonArr = [];
+  for (let i = 0; i < count; i++) {
+    skeletonArr.push(<SkeletonCard />);
+  }
+  return skeletonArr;
+}
+
+export default function ShopItems({ selectedCategory }) {
   const { isPending, error, data } = useQuery({
     queryKey: ["shopItems"],
     queryFn: () =>
@@ -92,29 +138,38 @@ export default function ShopItems({selectedCategory}) {
         }
         return res.json();
       }),
-    staleTime: 1000*60,
+    staleTime: 1000 * 60,
   });
-
-  if (isPending) return "Loading...";
 
   if (error) return "An error has occurred: " + error.message;
 
   return (
     <div className={styles.shopContainer}>
-      {data.map((item) => {
-        if(selectedCategory=== 'All' || item.category === selectedCategory){
-          return (
-            <ShopItem
-              key={item.id}
-              title={item.title}
-              price={item.price}
-              image={item.image}
-              rating={item.rating}
-            />
-          );
-        } 
-        return;
-      })}
+      {isPending ? (
+        <SkeletonSection />
+      ) : (
+        data.map((item) => {
+          if (
+            selectedCategory === "All" ||
+            item.category === selectedCategory
+          ) {
+            return (
+              <ShopItem
+                key={item.id}
+                id={item.id}
+                title={item.title}
+                price={item.price}
+                image={item.image}
+                rating={item.rating}
+              />
+            );
+          }
+          return;
+        })
+      )}
     </div>
   );
 }
+ShopItems.propTypes = {
+  selectedCategory: PropTypes.string,
+};
