@@ -1,0 +1,29 @@
+.inputIcon{
+    width: 50px;
+    transition: 0.2s;
+    user-select: none;
+}
+.inputIcon:hover{
+    filter: brightness(140%);
+    cursor: pointer;
+}
+.disabled{
+    filter: brightness(50%);
+    pointer-events: none;
+}
+.selectQty{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 10px;
+}
+.selectQty img{
+    width: 30px;
+}
+.selectQty input{
+    font-size: 20px;
+    width: 2ch;
+    height: 30px;
+    text-align: center;
+}

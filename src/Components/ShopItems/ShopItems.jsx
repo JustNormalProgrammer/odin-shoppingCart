@@ -9,6 +9,7 @@ import { useState, useContext } from "react";
 import { CartSetContext } from "../../Contexts/CartContext";
 import { useQuery } from "@tanstack/react-query";
 import Skeleton from "react-loading-skeleton";
+import QuantitiInputSection from "../QuantitiInputSection/QuantitiInputSection";
 import "react-loading-skeleton/dist/skeleton.css";
 
 const ratingStyles = {
@@ -39,7 +40,24 @@ function ShopItem({ id, title, price, image, rating }) {
   }
   function onAddToCart() {
     setCart((prev) => {
-      return [...prev, { id: id, qty: Qty }];
+      const arr = [];
+      let isFound = false;
+      if (prev.length < 1) {
+        arr.push({ id: id, qty: Qty });
+        return arr;
+      }
+      for (let i = 0; i < prev.length; i++) {
+        if (prev[i].id === id && !isFound) {
+          isFound = true;
+          arr.push({ ...prev[i], qty: prev[i].qty + Qty });
+        } else {
+          arr.push({ ...prev[i] });
+        }
+      }
+      if (!isFound) {
+        arr.push({ id: id, qty: Qty });
+      }
+      return arr;
     });
     setQty(1);
   }
@@ -55,23 +73,18 @@ function ShopItem({ id, title, price, image, rating }) {
       />
       <div className={styles.infoGroupWrapper}>
         <div className={styles.price}>{price}$</div>
-        <div className={styles.selectQty}>
-          <img
-            src={MinusIcon}
-            className={Qty <= 1 ? styles.disabled : ""}
-            onClick={subtractItem}
-            alt="Delete item"
-          />
-          <input
-            type="text"
-            inputMode="numeric"
-            min={0}
-            onChange={onInputChange}
-            value={Qty}
-          />
-          <img src={PlusIcon} onClick={addItem} alt="Add item" />
-        </div>
-        <img src={CartIcon} onClick={onAddToCart} alt="Add to cart" />
+        <QuantitiInputSection
+          subtractItem={subtractItem}
+          onInputChange={onInputChange}
+          addItem={addItem}
+          currentQty={Qty}
+        />
+        <img
+          src={CartIcon}
+          className={styles.cartIcon}
+          onClick={onAddToCart}
+          alt="Add to cart"
+        />
       </div>
     </div>
   );
@@ -123,7 +136,7 @@ function SkeletonCard() {
 function SkeletonSection({ count = 10 }) {
   const skeletonArr = [];
   for (let i = 0; i < count; i++) {
-    skeletonArr.push(<SkeletonCard />);
+    skeletonArr.push(<SkeletonCard key={i} />);
   }
   return skeletonArr;
 }

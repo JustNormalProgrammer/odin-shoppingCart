@@ -53,24 +53,11 @@
     filter: brightness(140%);
     cursor: pointer;
 }
-.disabled{
-    filter: brightness(50%);
-    pointer-events: none;
+.cartIcon{
+    margin-left: 10px;
 }
-.selectQty{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-    gap: 10px;
-    margin-right: 10px;
-}
-.selectQty img{
-    width: 30px;
-}
-.selectQty input{
-    font-size: 20px;
-    width: 2ch;
-    height: 30px;
-    text-align: center;
+@media(max-width:600px){
+    .shopContainer{
+        padding: 20px 0;
+    }
 }

@@ -76,3 +76,8 @@
     box-sizing: border-box;
     border: 1px solid var(--primary-text);
 }
+@media(max-width: 625px){
+    .link{
+        width: 80px;
+    }
+}
