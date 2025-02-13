@@ -1,6 +1,6 @@
 import styles from "./ShopNav.module.css";
 import PropTypes from "prop-types";
-import { useQuery } from "@tanstack/react-query";
+import useCategories from "../../Queries/useCategories";
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
@@ -22,19 +22,7 @@ NavItem.propTypes = {
 
 function CategorySection(props) {
 
-  const { isPending, error, data } = useQuery({
-    queryKey: ["shopCategories"],
-    queryFn: () =>
-      fetch("https://fakestoreapi.com/products/categories").then((res) => {
-        if (!res.ok) {
-          throw new Error(`Response status: ${res.status}`);
-        }
-        return res.json();
-      }),
-    staleTime: 1000*60,
-  });
-
-
+  const { isPending, error, data } = useCategories();
 
   if (error) return "An error has occurred: " + error.message;
 

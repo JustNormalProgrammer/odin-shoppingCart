@@ -9,9 +9,7 @@ function CartLogo() {
   const cartValue = useContext(CartValueContext);
   let qty = 0;
   for(let item of cartValue){
-    if(Number.isInteger(item.qty)){
       qty += item.qty;
-    }
   }
   return (
     <div className={styles.cartLink}>

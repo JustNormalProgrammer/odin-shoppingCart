@@ -1,4 +1,4 @@
-import styles from "./QuantitiInputSection.module.css";
+import styles from "./QuantityInputSection.module.css";
 import MinusIcon from "../../assets/minus-svgrepo-com.svg";
 import PlusIcon from "../../assets/plus-large-svgrepo-com.svg";
 

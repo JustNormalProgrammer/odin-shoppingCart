@@ -1,15 +1,13 @@
 import styles from "./ShopItems.module.css";
 import CartIcon from "../../assets/cart-plus-svgrepo-com.svg";
-import MinusIcon from "../../assets/minus-svgrepo-com.svg";
-import PlusIcon from "../../assets/plus-large-svgrepo-com.svg";
 import PropTypes from "prop-types";
 import { Rating, ThinStar } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import { useState, useContext } from "react";
 import { CartSetContext } from "../../Contexts/CartContext";
-import { useQuery } from "@tanstack/react-query";
+import useShopItems from "../../Queries/useShopItems";
 import Skeleton from "react-loading-skeleton";
-import QuantitiInputSection from "../QuantitiInputSection/QuantitiInputSection";
+import QuantitiInputSection from "../QuantityInputSection/QuantityInputSection";
 import "react-loading-skeleton/dist/skeleton.css";
 
 const ratingStyles = {
@@ -43,7 +41,7 @@ function ShopItem({ id, title, price, image, rating }) {
       const arr = [];
       let isFound = false;
       if (prev.length < 1) {
-        arr.push({ id: id, qty: Qty });
+        arr.push({ title, price, image, qty: Qty });
         return arr;
       }
       for (let i = 0; i < prev.length; i++) {
@@ -55,7 +53,7 @@ function ShopItem({ id, title, price, image, rating }) {
         }
       }
       if (!isFound) {
-        arr.push({ id: id, qty: Qty });
+        arr.push({ title, price, image, qty: Qty });
       }
       return arr;
     });
@@ -63,7 +61,7 @@ function ShopItem({ id, title, price, image, rating }) {
   }
   return (
     <div className={styles.shopItem}>
-      <img src={image} alt={title} />
+      <img src={image} alt={title} className={styles.image} />
       <div className={styles.itemTitle}>{title}</div>
       <Rating
         readOnly
@@ -142,17 +140,7 @@ function SkeletonSection({ count = 10 }) {
 }
 
 export default function ShopItems({ selectedCategory }) {
-  const { isPending, error, data } = useQuery({
-    queryKey: ["shopItems"],
-    queryFn: () =>
-      fetch("https://fakestoreapi.com/products").then((res) => {
-        if (!res.ok) {
-          throw new Error(`Response status: ${res.status}`);
-        }
-        return res.json();
-      }),
-    staleTime: 1000 * 60,
-  });
+  const { isPending, error, data } = useShopItems();
 
   if (error) return "An error has occurred: " + error.message;
 

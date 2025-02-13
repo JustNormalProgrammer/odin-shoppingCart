@@ -1,8 +1,3 @@
-.inputIcon{
-    width: 50px;
-    transition: 0.2s;
-    user-select: none;
-}
 .inputIcon:hover{
     filter: brightness(140%);
     cursor: pointer;
@@ -20,6 +15,12 @@
 }
 .selectQty img{
     width: 30px;
+    transition: 0.2s;
+    user-select: none;
+}
+.selectQty img:hover{
+    filter: brightness(140%);
+    cursor: pointer;
 }
 .selectQty input{
     font-size: 20px;
