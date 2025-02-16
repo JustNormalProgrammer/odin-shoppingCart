@@ -3,11 +3,11 @@ import CartIcon from "../../assets/cart-plus-svgrepo-com.svg";
 import PropTypes from "prop-types";
 import { Rating, ThinStar } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
-import { useState, useContext } from "react";
+import { useState, useContext, useMemo } from "react";
 import { CartSetContext } from "../../Contexts/CartContext";
 import useShopItems from "../../Queries/useShopItems";
 import Skeleton from "react-loading-skeleton";
-import QuantitiInputSection from "../QuantityInputSection/QuantityInputSection";
+import QuantityInputSection from "../QuantityInputSection/QuantityInputSection";
 import "react-loading-skeleton/dist/skeleton.css";
 
 const ratingStyles = {
@@ -41,7 +41,7 @@ function ShopItem({ id, title, price, image, rating }) {
       const arr = [];
       let isFound = false;
       if (prev.length < 1) {
-        arr.push({ title, price, image, qty: Qty });
+        arr.push({ title, price, image, id, qty: Qty });
         return arr;
       }
       for (let i = 0; i < prev.length; i++) {
@@ -53,7 +53,7 @@ function ShopItem({ id, title, price, image, rating }) {
         }
       }
       if (!isFound) {
-        arr.push({ title, price, image, qty: Qty });
+        arr.push({ title, price, image, id, qty: Qty });
       }
       return arr;
     });
@@ -71,7 +71,7 @@ function ShopItem({ id, title, price, image, rating }) {
       />
       <div className={styles.infoGroupWrapper}>
         <div className={styles.price}>{price}$</div>
-        <QuantitiInputSection
+        <QuantityInputSection
           subtractItem={subtractItem}
           onInputChange={onInputChange}
           addItem={addItem}
@@ -139,38 +139,50 @@ function SkeletonSection({ count = 10 }) {
   return skeletonArr;
 }
 
-export default function ShopItems({ selectedCategory }) {
+export default function ShopItems({ selectedCategory, sortBy }) {
   const { isPending, error, data } = useShopItems();
 
   if (error) return "An error has occurred: " + error.message;
+
+  function transformData(){
+    if(!isPending){
+      const transformedData = data.filter(item => {
+        if(selectedCategory === "None" || selectedCategory === item.category) return true;
+        return false;
+      })
+      if(sortBy === "Price asc") return transformedData.sort((a,b) => a.price - b.price);
+      if(sortBy === "Price desc") return transformedData.sort((a,b) => b.price - a.price);
+      if(sortBy === "Rating asc") return transformedData.sort((a,b) => a.rating.rate - b.rating.rate);
+      if(sortBy === "Rating desc") return transformedData.sort((a,b) => b.rating.rate - a.rating.rate);
+      return transformedData;
+    }
+    return;
+  }
+  let transformedData = transformData();
 
   return (
     <div className={styles.shopContainer}>
       {isPending ? (
         <SkeletonSection />
       ) : (
-        data.map((item) => {
-          if (
-            selectedCategory === "All" ||
-            item.category === selectedCategory
-          ) {
-            return (
-              <ShopItem
-                key={item.id}
-                id={item.id}
-                title={item.title}
-                price={item.price}
-                image={item.image}
-                rating={item.rating}
-              />
-            );
-          }
-          return;
-        })
+        transformedData.map((item) => {
+              return (
+                <ShopItem
+                  key={item.id}
+                  id={item.id}
+                  title={item.title}
+                  price={item.price}
+                  image={item.image}
+                  rating={item.rating}
+                />
+              );
+            }
+          )
       )}
     </div>
   );
 }
 ShopItems.propTypes = {
   selectedCategory: PropTypes.string,
+  sortBy: PropTypes.string,
 };

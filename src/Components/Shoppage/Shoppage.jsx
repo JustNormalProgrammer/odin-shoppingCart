@@ -5,12 +5,13 @@ import { useState } from "react";
 
 export default function Shoppage() {
 
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState("None");
+  const [sortBy, setSortBy] = useState("None");
 
   return (
     <div className={styles.container}>
-      <ShopNav setSelectedCategory={setSelectedCategory} selectedCategory={selectedCategory} />
-      <ShopItems selectedCategory={selectedCategory} />
+      <ShopNav setSelectedCategory={setSelectedCategory} selectedCategory={selectedCategory} sortBy={sortBy} setSortBy={setSortBy} />
+      <ShopItems selectedCategory={selectedCategory} sortBy={sortBy}/>
     </div>
   );
 }

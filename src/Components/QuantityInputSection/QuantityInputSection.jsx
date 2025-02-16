@@ -1,8 +1,8 @@
 import styles from "./QuantityInputSection.module.css";
 import MinusIcon from "../../assets/minus-svgrepo-com.svg";
 import PlusIcon from "../../assets/plus-large-svgrepo-com.svg";
-
-export default function QuantitiInputSection({subtractItem,onInputChange,currentQty,addItem}) {
+import PropTypes from "prop-types";
+export default function QuantityInputSection({subtractItem,onInputChange,currentQty,addItem}) {
   return (
     <div className={styles.selectQty}>
       <img
@@ -21,4 +21,11 @@ export default function QuantitiInputSection({subtractItem,onInputChange,current
       <img src={PlusIcon} onClick={addItem} alt="Add item" />
     </div>
   );
+}
+
+QuantityInputSection.propTypes = {
+  subtractItem: PropTypes.func,
+  onInputChange: PropTypes.func,
+  currentQty: PropTypes.number, 
+  addItem: PropTypes.func,
 }

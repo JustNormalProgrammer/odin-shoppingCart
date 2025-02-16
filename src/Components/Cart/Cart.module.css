@@ -3,10 +3,11 @@
     gap: 40px;
     display: flex;
     flex-wrap: wrap;
-    margin: 40px 20px;
+    margin: 20px 20px;
 }
 .cartItems{
     flex:4;
+    min-width: 300px;
     background-color: var(--main-bg);
     display: flex;
     flex-direction: column;
@@ -17,9 +18,8 @@
 }
 .checkoutSection{
     flex: 2;
-    min-width: 320px;
+    min-width: 300px;
     border-radius: 12px;
-    
 }
 .checkoutCard{
     display: flex;
@@ -28,7 +28,7 @@
     justify-content: center;
     gap: 30px;
     position: sticky;
-    top: 100px;
+    top: 80px;
     background-color: var(--main-bg);
     border-radius: 12px;
     font-weight: 600;
@@ -96,11 +96,15 @@
 .price{
     font-size: 26px;
     font-weight: 600;
+    overflow-wrap: break-word;
+    text-align: right;
 }
 .quantitySection{
     display: flex;
     gap: 10px;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 svg{
@@ -127,5 +131,8 @@ svg:hover{
 @media(max-width: 400px){
     .quantitySection{
         flex-direction: column;
+    }
+    .checkoutSection{
+        max-width: 100%;
     }
 }
