@@ -1,0 +1,72 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App componenent > match snapshot 1`] = `
+<div>
+  <nav
+    class="_nav_7e3bfa"
+  >
+    <div
+      class="_logoGroup_4ef1a4"
+    >
+      <a
+        data-discover="true"
+        href="/"
+      >
+        <img
+          alt="Logo"
+          class="_logo_4ef1a4"
+          src="data:image/svg+xml,%3c!DOCTYPE%20svg%20PUBLIC%20'-//W3C//DTD%20SVG%201.1//EN'%20'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Transformed%20by:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%2024.00%2024.00'%20id='Layer_1'%20data-name='Layer%201'%20xmlns='http://www.w3.org/2000/svg'%20fill=''%20stroke=''%20transform='matrix(1,%200,%200,%201,%200,%200)rotate(0)'%3e%3cg%20id='SVGRepo_bgCarrier'%20stroke-width='0'/%3e%3cg%20id='SVGRepo_tracerCarrier'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%23CCCCCC'%20stroke-width='0.24000000000000005'/%3e%3cg%20id='SVGRepo_iconCarrier'%3e%3cdefs%3e%3cstyle%3e.cls-1{fill:none;stroke:%238962f3;stroke-miterlimit:10;stroke-width:1.56;}%3c/style%3e%3c/defs%3e%3ccircle%20class='cls-1'%20cx='12'%20cy='4.34'%20r='2.86'/%3e%3ccircle%20class='cls-1'%20cx='19.64'%20cy='16.75'%20r='2.86'/%3e%3ccircle%20class='cls-1'%20cx='4.36'%20cy='16.75'%20r='2.86'/%3e%3cpath%20class='cls-1'%20d='M6,19.09a8.59,8.59,0,0,0,12,0'/%3e%3cpath%20class='cls-1'%20d='M14.82,4.82a8.57,8.57,0,0,1,5.77,8.11,6.71,6.71,0,0,1-.08,1.1'/%3e%3cpath%20class='cls-1'%20d='M3.49,14a6.71,6.71,0,0,1-.08-1.1A8.57,8.57,0,0,1,9.18,4.82'/%3e%3c/g%3e%3c/svg%3e"
+        />
+        <div
+          class="_logoText_4ef1a4"
+        >
+          ReactShop
+        </div>
+      </a>
+    </div>
+    <ul>
+      <li>
+        <a
+          aria-current="page"
+          class="_link_7e3bfa active"
+          data-discover="true"
+          href="/"
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          class="_link_7e3bfa"
+          data-discover="true"
+          href="/shop"
+        >
+          Shop
+        </a>
+      </li>
+      <li>
+        <a
+          class="_link_7e3bfa"
+          data-discover="true"
+          href="/shop/cart"
+        >
+          <div
+            class="_cartLink_7e3bfa"
+          >
+            <img
+              alt="Cart"
+              class="_cart_7e3bfa"
+              src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Generator:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M6.29977%205H21L19%2012H7.37671M20%2016H8L6%203H3M9%2020C9%2020.5523%208.55228%2021%208%2021C7.44772%2021%207%2020.5523%207%2020C7%2019.4477%207.44772%2019%208%2019C8.55228%2019%209%2019.4477%209%2020ZM20%2020C20%2020.5523%2019.5523%2021%2019%2021C18.4477%2021%2018%2020.5523%2018%2020C18%2019.4477%2018.4477%2019%2019%2019C19.5523%2019%2020%2019.4477%2020%2020Z'%20stroke='%238962f3'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+            />
+            <div
+              class="_cartQty_7e3bfa"
+            >
+              0
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;

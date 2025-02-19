@@ -13,7 +13,7 @@ function CartLogo() {
   }
   return (
     <div className={styles.cartLink}>
-      <img className={styles.cart} src={CartIcon} />{" "}
+      <img className={styles.cart} src={CartIcon} alt="Cart"/>
       <div className={styles.cartQty}>{qty}</div>
     </div>
   );

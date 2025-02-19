@@ -62,7 +62,7 @@ function CartItem({ qty, title, price, image }) {
             subtractItem={onSubtract}
           />
           <div className={styles.price}>{total}$</div>
-          <svg
+          <svg aria-label="Delete"
           onClick={onDelete}
             width="64px"
             height="64px"

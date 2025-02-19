@@ -1,0 +1,621 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Shoppage component > renders shoppage component with skeleton loaders 1`] = `
+<div>
+  <div
+    class="_container_35a4d7"
+  >
+    <nav
+      class="_navContainer_24044f"
+    >
+      <div
+        class="_navWrapper_24044f"
+      >
+        <div
+          class="_navCard_24044f"
+        >
+          <div
+            class="_sectionHeader_24044f"
+          >
+            Categories
+          </div>
+          <div
+            class="_cardContent_24044f"
+          >
+            <span
+              aria-busy="true"
+              aria-live="polite"
+            >
+              <span
+                class="react-loading-skeleton"
+                style="height: 25px; --base-color: #2f293a; --highlight-color: #a190fa;"
+              >
+                ‌
+              </span>
+              <br />
+              <span
+                class="react-loading-skeleton"
+                style="height: 25px; --base-color: #2f293a; --highlight-color: #a190fa;"
+              >
+                ‌
+              </span>
+              <br />
+              <span
+                class="react-loading-skeleton"
+                style="height: 25px; --base-color: #2f293a; --highlight-color: #a190fa;"
+              >
+                ‌
+              </span>
+              <br />
+              <span
+                class="react-loading-skeleton"
+                style="height: 25px; --base-color: #2f293a; --highlight-color: #a190fa;"
+              >
+                ‌
+              </span>
+              <br />
+            </span>
+          </div>
+        </div>
+        <div
+          class="_navCard_24044f"
+        >
+          <div
+            class="_sectionHeader_24044f"
+          >
+            Sort by
+          </div>
+          <div
+            class="_cardContent_24044f"
+          >
+            <div
+              class=""
+            >
+              Price asc
+            </div>
+            <div
+              class=""
+            >
+              Price desc
+            </div>
+            <div
+              class=""
+            >
+              Rating asc
+            </div>
+            <div
+              class=""
+            >
+              Rating desc
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="_shopContainer_19f3cb"
+    >
+      <div
+        class="_shopItem_19f3cb"
+      >
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 150px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 60px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 40px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 60px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+      </div>
+      <div
+        class="_shopItem_19f3cb"
+      >
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 150px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 60px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 40px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 60px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+      </div>
+      <div
+        class="_shopItem_19f3cb"
+      >
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 150px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 60px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 40px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 60px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+      </div>
+      <div
+        class="_shopItem_19f3cb"
+      >
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 150px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 60px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 40px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 60px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+      </div>
+      <div
+        class="_shopItem_19f3cb"
+      >
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 150px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 60px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 40px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 60px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+      </div>
+      <div
+        class="_shopItem_19f3cb"
+      >
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 150px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 60px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 40px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 60px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+      </div>
+      <div
+        class="_shopItem_19f3cb"
+      >
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 150px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 60px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 40px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 60px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+      </div>
+      <div
+        class="_shopItem_19f3cb"
+      >
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 150px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 60px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 40px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 60px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+      </div>
+      <div
+        class="_shopItem_19f3cb"
+      >
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 150px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 60px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 40px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 60px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+      </div>
+      <div
+        class="_shopItem_19f3cb"
+      >
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 150px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 60px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 40px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton"
+            style="width: 220px; height: 60px; --base-color: #2f293a; --highlight-color: #a190fa;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

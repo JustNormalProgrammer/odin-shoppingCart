@@ -3,7 +3,7 @@ import CartIcon from "../../assets/cart-plus-svgrepo-com.svg";
 import PropTypes from "prop-types";
 import { Rating, ThinStar } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
-import { useState, useContext, useMemo } from "react";
+import { useState, useContext } from "react";
 import { CartSetContext } from "../../Contexts/CartContext";
 import useShopItems from "../../Queries/useShopItems";
 import Skeleton from "react-loading-skeleton";
@@ -60,7 +60,7 @@ function ShopItem({ id, title, price, image, rating }) {
     setQty(1);
   }
   return (
-    <div className={styles.shopItem}>
+    <div className={styles.shopItem} data-testid="item">
       <img src={image} alt={title} className={styles.image} />
       <div className={styles.itemTitle}>{title}</div>
       <Rating
@@ -134,8 +134,9 @@ function SkeletonCard() {
 function SkeletonSection({ count = 10 }) {
   const skeletonArr = [];
   for (let i = 0; i < count; i++) {
-    skeletonArr.push(<SkeletonCard key={i} />);
+    skeletonArr.push(<SkeletonCard key={i}/>);
   }
+
   return skeletonArr;
 }
 
@@ -163,7 +164,9 @@ export default function ShopItems({ selectedCategory, sortBy }) {
   return (
     <div className={styles.shopContainer}>
       {isPending ? (
+        <>
         <SkeletonSection />
+        </>
       ) : (
         transformedData.map((item) => {
               return (
